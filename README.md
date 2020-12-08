@@ -8,8 +8,10 @@ Using：
 
 ```shell
 mabg select username,amount from `xxx_201801` -r 201801 -s 201801 -e 202002
+or
+mabg select username,amount from `xxx_20180101` -r 20180101 -s 20180101 -e 20200201
 ```
 
 Result:
 
-![image-20201208191144669](/image/image-20201208191144669.png)
+![image-20201208221623088](/image/image-20201208221623088.png)

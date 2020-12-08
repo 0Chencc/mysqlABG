@@ -3,3 +3,4 @@ cmake-build-debug/
 *.bin
 *.log
 *.txt
+*.a
