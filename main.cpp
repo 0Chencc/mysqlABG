@@ -10,6 +10,37 @@ Using:
     -e endtime
  */
 using namespace std;
+int getDay(int y,int m) {
+    int month[12] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12};
+    int days[12] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+    if (y % 4 == 0 && m == 2) {
+        return 29;
+    }
+    for (int i = 0; i < (sizeof(month)); ++i) {
+        if (month[i] == m) {
+            return days[i];
+        }
+    }
+    return 0;
+}
+string isZero(int j){
+    if (j>=10){
+        return to_string(j);
+    } else{
+        return "0"+to_string(j);
+    }
+}
+string isZero(int m,int d){
+    if (m>=10&&d>=10){
+        return to_string(m)+to_string(d);
+    } else if(m>=10&&d<10){
+        return to_string(m)+"0"+to_string(d);
+    }else if(m<10&&d>=10){
+        return "0"+to_string(m)+to_string(d);
+    }else{
+        return "0"+to_string(m)+"0"+to_string(d);
+    }
+}
 void _Time(string Statement,string retext,string Start,string End){
     string head = Statement.substr(0,Statement.find(retext));
     string tail = Statement.substr(Statement.find(retext)+retext.length(),Statement.length());
@@ -17,64 +48,48 @@ void _Time(string Statement,string retext,string Start,string End){
     switch (retext.length()) {
         case 6:
             sy = atoi(Start.substr(0,4).c_str());
-            sm = atoi(Start.substr(4,5).c_str());
+            sm = atoi(Start.substr(4,2).c_str());
             ey = atoi(End.substr(0,4).c_str());
-            em = atoi(End.substr(4,5).c_str());
-            if(ey == sy){
-                m = em-sm;
-            }else{
-                m = (ey-sy)*12+(em-sm);
-            }
-            for (int i = sm; i < m; ++i) {
-                int j = i;
-                int s = 1;
-                while (s){
-                    if(j>12){
-                        j = j-12;
-                    }else{
-                        s=0;
-                    }
-                }
-                if(j%12==0){
-                    ++y;
-                    j=1;
-                }
-                if(i+1==m){
-                    if(j<10){
-                        cout<<head;
-                        cout<<(to_string(sy+y)+"0"+to_string(j));
-                        cout<<tail<<endl;
-                    }else{
-                        cout<<head;
-                        cout<<(to_string(sy+y)+to_string(j));
-                        cout<<tail<<endl;
-                    }
-                }else{
-                    if(j<10){
-                        cout<<head;
-                        cout<<(to_string(sy+y)+"0"+to_string(j));
-                        cout<<tail<<"union all"<<endl;
-                    }else{
-                        cout<<head;
-                        cout<<(to_string(sy+y)+to_string(j));
-                        cout<<tail<<"union all"<<endl;
-                    }
-                }
+            em = atoi(End.substr(4,2).c_str());
+            y = sy;
+            ey==sy?m=em-sm+1:m=(ey-sy)*12+(em-sm)+1;
+            for (int i = sm,j=sm; i <= m; ++i) {
+                if (j == 13) {y = y+1;j = 1;}
+                cout << head << (to_string(y) + isZero(j)) << tail;
+                i==m? cout << endl:cout << "union all" << endl;
+                j++;
             }
             break;
         case 8:
-            sy = atoi(Start.substr(0,3).c_str());
-            sm = atoi(Start.substr(3,5).c_str());
-            sd = atoi(Start.substr(5,7).c_str());
-            ey = atoi(End.substr(0,3).c_str());
-            em = atoi(End.substr(3,5).c_str());
-            ed = atoi(End.substr(5,7).c_str());
+            sy = atoi(Start.substr(0,4).c_str());
+            sm = atoi(Start.substr(4,2).c_str());
+            sd = atoi(Start.substr(6,2).c_str());
+            ey = atoi(End.substr(0,4).c_str());
+            em = atoi(End.substr(4,2).c_str());
+            ed = atoi(End.substr(6,2).c_str());
+            y=sy;
+            ey==sy?m=em-sm+1:m=(ey-sy)*12+(em-sm)+1;
+            for(int k=sd;k<=getDay(y,sm);++k){
+                cout << head << (to_string(y) + isZero(sm,k)) << tail;
+                m==1&&k==ed? cout << endl:cout << "union all" << endl;
+                if(m==1&&k==ed)break;
+            }
+            for (int i = sm+1,j=sm+1; i <= m; ++i) {
+                if (j == 13) {y = y+1;j = 1;}
+                for (int k = 1 ; k <= getDay(y,j); ++k) {
+                    cout << head << (to_string(y) + isZero(j,k)) << tail;
+                    i==m&&k==ed? cout << endl:cout << "union all" << endl;
+                    if(m==i&&k==ed)break;
+                }
+                j++;
+            }
             break;
         default:
             break;
     }
 }
 typedef std::uint64_t hash_t;
+
 constexpr hash_t prime = 0x100000001B3ull;
 constexpr hash_t basis = 0xCBF29CE484222325ull;
 
@@ -98,9 +113,7 @@ int main(int argc,char ** argv) {
         switch (hash_(argv[i])) {
             case hash_compile_time("-r"):
                 retext = argv[i+1];
-                for (int j = 1; j < i; ++j) {
-                    Statement = Statement+argv[j]+' ';
-                }
+                for (int j = 1; j < i; ++j) {Statement = Statement+argv[j]+' ';}
             case hash_compile_time("-s"):
                 Start = argv[i+1];
             case hash_compile_time("-e"):
