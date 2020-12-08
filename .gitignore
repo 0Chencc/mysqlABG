@@ -1,1 +1,5 @@
-/cmake-build-debug/
+cmake-build-debug/
+*.exe
+*.bin
+*.log
+*.txt
