@@ -12,4 +12,4 @@ mabg select username,amount from `xxx_201801` -r 201801 -s 201801 -e 202002
 
 Result:
 
-![image-20201208191144669](D:\Program\C\mysqlABG\image\image-20201208191144669.png)
+![image-20201208191144669](/image/image-20201208191144669.png)
