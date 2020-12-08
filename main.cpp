@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-/*mysql Automatically build grammar
+/*Mysql Automatically build grammar
 Using:
  1.string exp:select username,amount from `xxx_201801` -r 201801 -s 201801 -e 202002
  2.using exp:select username,amount from `xxx_201801` to select username,amount from `xxx_202002`
