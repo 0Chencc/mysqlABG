@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="mysqlABG"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="D:/Program/C/mysqlABG/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MinGW64/bin/mingw32-make.exe -f &quot;D:/Program/C/mysqlABG/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/PROGRA~1/MinGW64/bin/mingw32-make.exe -f &quot;D:/Program/C/mysqlABG/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MinGW64/bin/mingw32-make.exe -f &quot;D:/Program/C/mysqlABG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MinGW64/bin/mingw32-make.exe -f &quot;D:/Program/C/mysqlABG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mysqlABG">
+				<Option output="D:/Program/C/mysqlABG/cmake-build-debug/mysqlABG.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Program/C/mysqlABG/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Program Files/MinGW64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/Program Files/MinGW64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/MinGW64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/MinGW64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/MinGW64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/MinGW64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MinGW64/bin/mingw32-make.exe -f &quot;D:/Program/C/mysqlABG/cmake-build-debug/Makefile&quot;  VERBOSE=1 mysqlABG"/>
+					<CompileFile command="C:/PROGRA~1/MinGW64/bin/mingw32-make.exe -f &quot;D:/Program/C/mysqlABG/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MinGW64/bin/mingw32-make.exe -f &quot;D:/Program/C/mysqlABG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MinGW64/bin/mingw32-make.exe -f &quot;D:/Program/C/mysqlABG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mysqlABG/fast">
+				<Option output="D:/Program/C/mysqlABG/cmake-build-debug/mysqlABG.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Program/C/mysqlABG/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Program Files/MinGW64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/Program Files/MinGW64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/MinGW64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/MinGW64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/MinGW64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/MinGW64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MinGW64/bin/mingw32-make.exe -f &quot;D:/Program/C/mysqlABG/cmake-build-debug/Makefile&quot;  VERBOSE=1 mysqlABG/fast"/>
+					<CompileFile command="C:/PROGRA~1/MinGW64/bin/mingw32-make.exe -f &quot;D:/Program/C/mysqlABG/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MinGW64/bin/mingw32-make.exe -f &quot;D:/Program/C/mysqlABG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MinGW64/bin/mingw32-make.exe -f &quot;D:/Program/C/mysqlABG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="D:/Program/C/mysqlABG/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MinGW64/bin/mingw32-make.exe -f &quot;D:/Program/C/mysqlABG/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/PROGRA~1/MinGW64/bin/mingw32-make.exe -f &quot;D:/Program/C/mysqlABG/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MinGW64/bin/mingw32-make.exe -f &quot;D:/Program/C/mysqlABG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MinGW64/bin/mingw32-make.exe -f &quot;D:/Program/C/mysqlABG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="D:/Program/C/mysqlABG/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MinGW64/bin/mingw32-make.exe -f &quot;D:/Program/C/mysqlABG/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/PROGRA~1/MinGW64/bin/mingw32-make.exe -f &quot;D:/Program/C/mysqlABG/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MinGW64/bin/mingw32-make.exe -f &quot;D:/Program/C/mysqlABG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MinGW64/bin/mingw32-make.exe -f &quot;D:/Program/C/mysqlABG/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="D:/Program/C/mysqlABG/main.cpp">
+			<Option target="mysqlABG"/>
+		</Unit>
+		<Unit filename="D:/Program/C/mysqlABG/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

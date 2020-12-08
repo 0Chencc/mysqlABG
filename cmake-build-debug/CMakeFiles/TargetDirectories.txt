@@ -1,0 +1,3 @@
+D:/Program/C/mysqlABG/cmake-build-debug/CMakeFiles/mysqlABG.dir
+D:/Program/C/mysqlABG/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/Program/C/mysqlABG/cmake-build-debug/CMakeFiles/rebuild_cache.dir
